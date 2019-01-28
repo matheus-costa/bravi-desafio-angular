@@ -1,0 +1,81 @@
+<br />
+<section class="container">
+  <div class="row justify-content-center">
+    <div class="input-group mb-3 col-6">
+      <input
+        [(ngModel)]="cityName"
+        type="text"
+        class="form-control"
+        placeholder="Enter the name of your city"
+        aria-label="Enter the name of your city"
+        name="cityName"
+      />
+      <div class="input-group-append">
+        <button class="btn btn-primary" (click)="searchWeather()">
+          Search
+        </button>
+      </div>
+    </div>
+  </div>
+  <div class="row justify-content-center">
+    <article class="col-6">
+      <div class="card" *ngIf="weather">
+        <div class="card-header">
+          <h3>{{ today | date: "MMM" }}, {{ today | date: "dd" }}</h3>
+          <span>{{ weather.name }}, {{ weather.sys.country }}</span>
+          <img
+            src="https://png.pngtree.com/svg/20161124/sunny_26629.png"
+            width="92"
+            alt=""
+            *ngIf="weather.weather[0].main == 'Sunny'"
+          />
+          <img
+            src="http://supercourts.com/pt/wp-content/uploads/2017/01/icon1.png"
+            width="92"
+            alt=""
+            *ngIf="weather.weather[0].main == 'Clouds'"
+          />
+          <img
+            src="http://cdn.onlinewebfonts.com/svg/img_542280.png"
+            width="92"
+            alt=""
+            *ngIf="weather.weather[0].main == 'Clear'"
+          />
+          <img
+            src="https://cdn3.iconfinder.com/data/icons/weather-icons-8/512/weather-thunder-rainy-h-512.png"
+            width="92"
+            alt=""
+            *ngIf="weather.weather[0].main == 'Rain'"
+          />
+        </div>
+
+        <div class="card-body">
+          <h5 class="card-title">{{ weather.weather[0].main }}</h5>
+          <h2>
+            {{ weather.main.temp }}º <span>{{ today | date: "EEEE" }}</span>
+          </h2>
+          <div class="left additional">
+            <p class="card-text">
+              <span>MIN</span><br />
+              <strong>{{ weather.main.temp_min }}º</strong>
+            </p>
+            <p class="card-text">
+              <span>MAX</span><br />
+              <strong>{{ weather.main.temp_max }}º</strong>
+            </p>
+          </div>
+          <div class="right additional">
+            <p class="card-text">
+              <span>WIND</span><br />
+              <strong>{{ weather.wind.speed }} km/h</strong>
+            </p>
+            <p class="card-text">
+              <span>HUMIDITY</span><br />
+              <strong>{{ weather.main.humidity }}%</strong>
+            </p>
+          </div>
+        </div>
+      </div>
+    </article>
+  </div>
+</section>

@@ -1,27 +1,37 @@
-# BraviDesafioAngular
+# Bravi Desafio Angular
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.1.1.
+Este projeto tem como objetivo a implementação do teste para a empresa [Bravi Softwares](https://www.bravi.com.br/) cujo o desafio é consumir a API de clima [Open Weather Map](http://openweathermap.org/api) buscando e apresentando as informações clímaticas atuais a partir do nome de uma cidade.
 
-## Development server
+BONUS:
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+- Incrementei ao desafio uma consulta inicial ao carregar a página da cidade onde se encontra o usuário, para tais informações utilizei a API [ipinfo.io](https://ipinfo.io/) que fornece informações de localização a partir do IP do dispositivo.
 
-## Code scaffolding
+Este projeto utiliza as tecnologias:
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- [Angular](https://angular.io) version 7.1.0.
+- [Bootstrap](https://getbootstrap.com) version 4.2.1.
+
+## Guia de uso
+
+Para usufruir da aplicação basta acessar a página inicial, automáticamente uma busca inicial das informaçãoes climáticas da cidade onde o usuário se encontra será executada.
+
+Para buscar informações climáticas de uma outra cidade, basta digitar o nome da cidade e clicar no botão `Search`
+
+## Implantação
+
+Para que este projeto seja executado é necessário que tenha instalado na máquina ou VM os seguintes recursos:
+
+- [NodeJS](https://nodejs.org) version 8.12.0
+- [AngularCLI](https://github.com/angular-cli) version 7.1.4
+
+## Servidor local
+
+Para rodar a aplicação em ambiente local, rode `ng serve` este comando irá subir o servidor. Agora em um navegador digite `http://localhost:4200/`. E a aplicação será carregada.
 
 ## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+Para realizar o deploy da aplicação em um servidor, rode `ng build` este comando irá realizar o build da aplicação. Os arquivos ficaram na pasta `dist/` no diretório raiz. Use o complemento `--prod` para realizar o build para produção.
 
-## Running unit tests
+## Help
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+Caso necessite de ajuda para implantação você pode enviar um email para [mcostap80@gmail.com](mailto://mcosta80@gmail.com).

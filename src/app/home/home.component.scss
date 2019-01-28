@@ -1,0 +1,48 @@
+.card {
+  border: none;
+  padding: 1rem;
+  margin-top: 2rem;
+  position: relative;
+  background: #fff;
+  box-shadow: 1px 1px 50px rgba(0, 0, 0, 0.2);
+  .card-header {
+    border: none;
+    padding: 1rem;
+    background: none;
+    img {
+      position: absolute;
+      top: 1rem;
+      right: 2rem;
+    }
+  }
+
+  .card-body {
+    h2 {
+      span {
+        font-size: 1rem;
+      }
+    }
+    .additional {
+      p {
+        width: auto;
+        float: left;
+        margin-right: 1rem;
+        span {
+          font-size: 0.7rem;
+        }
+        strong {
+          font-size: 1.3rem;
+          font-weight: 500;
+        }
+      }
+      &.left {
+        width: 50%;
+        float: left;
+      }
+      &.right {
+        width: 50%;
+        float: right;
+      }
+    }
+  }
+}
